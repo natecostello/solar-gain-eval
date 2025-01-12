@@ -1,0 +1,32 @@
+{
+	"name": "Python 3 Development Container",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:latest": {
+			"installChromium": true
+		},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": "chromium"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"donjayamanne.githistory",
+				"albert.TabOut",
+				"ms-toolsai.jupyter",
+				"ms-azuretools.vscode-docker",
+				"ms-python.autopep8",
+				"streetsidesoftware.code-spell-checker",
+				"ms-azuretools.vscode-docker",
+				"ms-python.vscode-pylance",
+				"quarto.quarto",
+				"mechatroner.rainbow-csv"
+			]
+		}
+	},
+	"postCreateCommand": "nbstripout --install"
+}
